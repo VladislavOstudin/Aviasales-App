@@ -1,0 +1,62 @@
+$text: #4A4A4A;
+$title: #A0B0B9;
+$border: #1890ff;
+$shadow: rgba(0, 0, 0, 0.35);
+
+.ticket_container {
+    padding: 20px 30px;
+    width: 450px;
+    height: 100%;
+    box-shadow: 0px 0px 10px $shadow;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price_container {
+    position: relative;
+    height: 50px;
+    color: $border;
+    font-size: 1.75em;
+    font-weight: 500;
+}
+
+.price_container img {
+    position: absolute;
+    top: 30%;
+    right: -14%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+}
+
+.ticket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticket_item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ticket_item_title {
+    color: $title;
+    font-size: 0.85em;
+    width: 110px;
+}
+
+.ticket_item_value {
+    color: $text;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .ticket_container {
+        width: 300px;
+    }
+  }

@@ -1,0 +1,80 @@
+$text: #4A4A4A;
+$border: #1890ff;
+$hover: #F1FCFF;
+$checkbox-gray: #bfbfbf;
+
+.checkboxes_container {
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: $text;
+  }
+  
+  .checkboxes_title {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 15px 45px 8px 21px;
+  }
+  
+  .group_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 9px;
+  }
+  
+  .custom_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 21px;
+    user-select: none;
+    transition: background-color 0.5s ease;
+  
+    .checkmark {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $checkbox-gray;
+      border-radius: 2px;
+      position: relative;
+      flex-shrink: 0;
+      transition: border-color 0.5s ease;
+    }
+  
+    &.checked .checkmark {
+      border-color: $border;
+    }
+  
+    &.checked .checkmark::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 12px;
+        background-image: url("../../icon/Ok.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translate(-50%, -50%);
+    }
+  
+    span:last-child {
+      font-size: 14px;
+    }
+  
+    &:hover {
+      background-color: $hover;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .checkboxes_container {
+      width: 250px;
+    }
+  }
