@@ -9,5 +9,5 @@ export const store = configureStore({
     sort: tabsReducer,
     tickets: ticketsReducer,
   },
-  devTools: true,
+  devTools: false,
 })
